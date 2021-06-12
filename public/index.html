@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Addition Game</title>
+    <link rel="stylesheet" href="./../assets/css/math.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Galindo&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="main">
+        <div class="main-box">
+          <div class="heading">
+            <h1>
+              <span class="m">M</span>
+              <span class="a">a</span>
+              <span class="t">t</span>
+              <span class="h">h</span>
+              <span class="q">Q</span>
+              <span class="u">u</span>
+              <span class="i">i</span>
+              <span class="z">z</span>
+            </h1>
+            <h2>
+              addition
+            </h2>
+          </div>
+          <div class="box1 d-flex">
+            <div class="box-col">
+              <input type="textf" id="input1" class="inputs" />
+            </div>
+
+            <div class="add-s d-flex">
+              <span>+</span>
+            </div>
+
+            <div class="box-col">
+              <input type="textf" id="input2" class="inputs" />
+            </div>
+          </div>
+         
+          <div class="box2 d-flex">
+            <input tpye="text" id="answer" class="d-flex"/>
+          </div>
+
+          
+          <div class="box2 d-flex">
+            <button class="btn" onclick="Game()">Check Answer</button>
+          </div class="d-flex">
+          <div class="show-anwser d-flex"><span id="ans"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let n1 = Math.floor(Math.random() * 20 + 1);
+      let n2 = Math.floor(Math.random() * 20 + 1);
+
+      document.getElementById("input1").value = n1;
+      document.getElementById("input2").value = n2;
+
+      let adds = n1 + n2;
+
+      function Game() {
+        var user = document.getElementById("answer").value;
+
+        if (user == adds) {
+          document.getElementById("ans").innerHTML =
+            "Well Done! Your Answer is Correct :)";
+        } else {
+          document.getElementById("ans").innerHTML =
+            " The Correct Answer is " + adds + " . Try Again";
+        }
+
+        var user = (document.getElementById("intext2").value = "");
+
+        n1 = Math.floor(Math.random() * 20 + 1);
+        n2 = Math.floor(Math.random() * 20 + 1);
+
+        document.getElementById("input1").value = n1;
+        document.getElementById("input2").value = n2;
+
+        adds = n1 + n2;
+      }
+    </script>
+  </body>14
+</html>
